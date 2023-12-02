@@ -4,7 +4,7 @@ import os
 def trimAndCompressVideo(inputPath, outputPath, startTime = 0, endTime = 10, bitrate = "1500k"):
 
     _, inputExtension = os.path.splitext(inputPath)
-    videoClip = VideoFileClip(inputPath)
+    videoClip   = VideoFileClip(inputPath)
     trimmedClip = videoClip.subclip(startTime, endTime)
 
     outputFormat = "mp4"
@@ -22,5 +22,6 @@ if __name__ == "__main__":
     inputVideoPath  = "input-video.mp4"
     outputVideoPath = "output-video.mp4"
 
+    #You can pass startTime and setTime while calling the function trimAndCompressVideo(inputVideoPath, outputVideoPath, startTime = 10, endTime = 20)
     trimAndCompressVideo(inputVideoPath, outputVideoPath)
 
